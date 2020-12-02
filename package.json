@@ -1,0 +1,27 @@
+{
+  "name": "devaway-racing-services",
+  "version": "0.1.0",
+  "author": "Javier Granados",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "react",
+    "next",
+    "javascript",
+    "tailwindcss",
+    "devaway"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvgranados/devaway-racing-services"
+  },
+  "scripts": {
+    "dev": "next dev -p 8000",
+    "build": "next build",
+    "start": "next start -p 8000"
+  },
+  "dependencies": {
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
