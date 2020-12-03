@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        beige: '#f8f7de',
-        cedarChest: '#c75643',
+        indigoDye: '#0d3b66',
+        orangeSoda: '#eb5335',
       },
     },
   },

@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar__button {
+  @apply max-w-full px-0 py-2 mx-4 outline-none text-indigoDye;
+}
+
+.navbar__button:target {
+  @apply bg-none;
+}
+
+@screen lg {
+  .navbar__button {
+    @apply p-4;
+  }
+
+  .navbar__button:hover,
+  .navbar__button.selected {
+    @apply underline text-orangeSoda;
+  }
+
+  .navbar__button.first {
+    @apply mt-0;
+  }
+}

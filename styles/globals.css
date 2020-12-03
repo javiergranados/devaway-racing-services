@@ -6,17 +6,17 @@ body {
   margin: 0;
 }
 
-body::-webkit-scrollbar {
+main::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 
-body::-webkit-scrollbar-thumb {
+main::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #c75643;
+  background-color: #0d3b66;
 }
 
-body::-webkit-scrollbar-track {
+main::-webkit-scrollbar-track {
   border-radius: 10px;
-  background-color: #f8f7de;
+  background-color: #a69cac;
 }

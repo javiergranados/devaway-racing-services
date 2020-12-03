@@ -1,8 +1,8 @@
-function IndexPage() {
+function AboutPage() {
   return (
     <div className="text-indigoDye">
       <h1 className="pb-4 text-4xl">DevAway Racing Services</h1>
-      <p className="text-3xl">Home page</p>
+      <p className="text-3xl">About page</p>
     </div>
   )
 }
@@ -10,9 +10,9 @@ function IndexPage() {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Home',
+      title: 'About',
     },
   }
 }
 
-export default IndexPage
+export default AboutPage
