@@ -2,9 +2,6 @@ import PropTypes from 'prop-types'
 import { formatTime, getRacesByPilot } from '../../utils/data'
 
 function Pilots({ pilots, races }) {
-  console.clear()
-  console.log(races)
-
   return (
     <div className="flex flex-col">
       {Object.entries(pilots).map(([id, pilot]) => {
@@ -27,7 +24,7 @@ function Pilots({ pilots, races }) {
                       {racesByPilot.map(race => (
                         <tr key={pilot.id}>
                           <td className="text-center table__tbody__td lg:text-left">{race.name}</td>
-                          <td className="table__tbody__td">999</td>
+                          <td className="table__tbody__td">{race.position}</td>
                           <td className="table__tbody__td">{formatTime(race.time)}</td>
                         </tr>
                       ))}

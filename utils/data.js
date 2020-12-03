@@ -1,6 +1,16 @@
 import moment from 'moment'
 
-const extractValues = data => {
+function sortRace(race) {
+  const sortedRace = race.sort((a, b) => {
+    const dateA = moment(a.time, 'HH:mm:ss')
+    const dateB = moment(b.time, 'HH:mm:ss')
+    return dateA.diff(dateB, 'seconds', true)
+  })
+
+  return sortedRace.map((el, index) => ({ ...el, position: index + 1 }))
+}
+
+function extractValues(data) {
   const races = {}
   const pilots = data.reduce((prev, next) => {
     next.races.forEach(element => {
@@ -21,23 +31,15 @@ const extractValues = data => {
       },
     }
   }, {})
-  return { pilots, races }
+
+  return { pilots, races: Object.values(races).map(sortRace) }
 }
 
-const sortRace = race => {
-  return race.sort((a, b) => {
-    const dateA = moment(a.time, 'HH:mm:ss')
-    const dateB = moment(b.time, 'HH:mm:ss')
-
-    return dateA.diff(dateB, 'seconds', true)
-  })
+function formatTime(time) {
+  return moment(time, 'HH:mm:ss').format('HH:mm:ss')
 }
 
-const formatTime = time => moment(time, 'HH:mm:ss').format('HH:mm:ss')
-
-const getRacesByPilot = (races, pilotId) =>
-  Object.values(races)
-    .map(el => el.filter(el2 => el2.pilotId === pilotId))
-    .flat()
-
+function getRacesByPilot(races, pilotId) {
+  return races.map(el => el.filter(el2 => el2.pilotId === pilotId)).flat()
+}
 export { extractValues, formatTime, getRacesByPilot, sortRace }

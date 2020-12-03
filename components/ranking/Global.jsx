@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
-import { formatTime, sortRace } from '../../utils/data'
+import { v4 as uuidv4 } from 'uuid'
+import { formatTime } from '../../utils/data'
 
 function Pilots({ pilots, races }) {
   return (
     <div className="flex flex-col">
-      {Object.values(races).map(race => {
-        const sortedRace = sortRace(race)
+      {races.map(race => {
         return (
-          <div key={race.name}>
+          <div key={uuidv4()}>
             <h2 className="py-5 text-2xl text-center font-regular lg:text-left">{race.name}</h2>
             <div className="overflow-auto max-h-96">
               <div className="inline-block min-w-full align-middle">
@@ -22,9 +22,9 @@ function Pilots({ pilots, races }) {
                       </tr>
                     </thead>
                     <tbody className="bg-seashell font-regular">
-                      {sortedRace.map((pilot, index) => (
-                        <tr key={pilot.id}>
-                          <td className="text-center table__tbody__td lg:text-left">{index + 1}</td>
+                      {race.map(pilot => (
+                        <tr key={uuidv4()}>
+                          <td className="text-center table__tbody__td lg:text-left">{pilot.position}</td>
                           <td className="table__tbody__td">
                             <div className="flex items-center">
                               <div className="flex-shrink-0 w-10 h-10">
@@ -51,7 +51,7 @@ function Pilots({ pilots, races }) {
 
 Pilots.propTypes = {
   pilots: PropTypes.shape({}).isRequired,
-  races: PropTypes.shape({}).isRequired,
+  races: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.shape({}))).isRequired,
 }
 
 export default Pilots
