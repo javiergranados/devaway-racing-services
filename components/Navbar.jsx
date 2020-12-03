@@ -22,7 +22,7 @@ function Navbar() {
       <div className="block lg:hidden">
         <button
           type="button"
-          className="flex items-center px-3 py-2 border rounded text-indigoDye border-indigoDye focus:outline-none"
+          className="flex items-center px-3 py-2 border rounded text-burntUmber border-burntUmber focus:outline-none"
           onClick={handleClick}
         >
           <svg
@@ -48,7 +48,7 @@ function Navbar() {
       <div
         className={`${
           showMenu ? 'flex' : 'hidden'
-        } flex-grow w-full lg:flex lg:items-center lg:w-auto lg:flex-row flex-col text-lg`}
+        } flex-grow w-full lg:flex lg:items-center lg:w-auto lg:flex-row flex-col font-semi text-lg`}
       >
         <a
           href="/"

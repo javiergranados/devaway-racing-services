@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'raleway-regular';
+  font-weight: 400;
+  src: url('/fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'raleway-semi';
+  font-weight: 600;
+  src: url('/fonts/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'raleway-bold';
+  font-weight: 700;
+  src: url('/fonts/Raleway-Bold.ttf');
+}
+
 .navbar__button {
   @apply max-w-full px-0 py-2 mx-4 outline-none text-indigoDye;
 }
