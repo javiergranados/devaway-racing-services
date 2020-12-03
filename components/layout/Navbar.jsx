@@ -58,6 +58,13 @@ function Navbar() {
           Home
         </a>
         <a
+          href="/pilots"
+          onClick={handleLink}
+          className={`block navbar__button mt-2${(router.pathname === '/pilots' && ' selected') || ''}`}
+        >
+          Pilots
+        </a>
+        <a
           href="/about"
           onClick={handleLink}
           className={`block navbar__button mt-2${(router.pathname === '/about' && ' selected') || ''}`}

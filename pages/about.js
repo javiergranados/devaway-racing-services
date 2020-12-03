@@ -1,8 +1,19 @@
 function AboutPage() {
   return (
     <div className="text-indigoDye">
-      <h1 className="pb-4 text-4xl text-center font-semi lg:text-left">DevAway Racing Services</h1>
-      <p className="text-3xl">About page</p>
+      <h1 className="pb-4 text-4xl text-center font-semi lg:text-left">About</h1>
+      <p className="text-3xl">
+        A technical test for&nbsp;
+        <a
+          href="https://www.villenavalley.com"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:underline text-orangeSoda"
+        >
+          DevAway
+        </a>
+        &nbsp;company
+      </p>
     </div>
   )
 }
