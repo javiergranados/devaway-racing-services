@@ -7,7 +7,7 @@ function Layout({ title, children }) {
   return (
     <>
       <Head>
-        <title>{`${title} | DevAway Racing Services`}</title>
+        <title>{`${title} | DevAway Racing`}</title>
       </Head>
       <div className="flex flex-col w-screen h-screen bg-white text-indigoDye font-regular">
         <div className="relative flex flex-col flex-1 w-full overflow-hidden">
