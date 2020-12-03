@@ -40,6 +40,7 @@ function formatTime(time) {
 }
 
 function getRacesByPilot(races, pilotId) {
-  return races.map(el => el.filter(el2 => el2.pilotId === pilotId)).flat()
+  return races.map(race => race.filter(element => element.pilotId === pilotId)).flat()
 }
+
 export { extractValues, formatTime, getRacesByPilot, sortRace }
