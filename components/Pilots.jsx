@@ -3,6 +3,7 @@ import { PILOTS_PROPTYPES } from '../constants'
 function Pilots({ pilots }) {
   return (
     <div className="flex flex-col">
+      <h2 className="py-5 text-2xl text-center font-regular lg:text-left">List of Pilots</h2>
       <div className="overflow-x-auto">
         <div className="inline-block min-w-full align-middle">
           <div className="overflow-hidden border-b border-gray-300 shadow sm:rounded-lg">

@@ -7,7 +7,7 @@ function PilotsPage({ data }) {
 
   return (
     <div className="text-indigoDye">
-      <h1 className="pb-10 text-4xl text-center font-semi lg:text-left">Pilots</h1>
+      <h1 className="text-4xl text-center font-semi lg:text-left">Pilots</h1>
       <Pilots pilots={pilots} />
     </div>
   )
