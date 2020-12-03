@@ -1,11 +1,13 @@
+import moment from 'moment'
+
 const extractValues = data => {
   const races = {}
   const pilots = data.reduce((prev, next) => {
     next.races.forEach(element => {
       if (!races[element.name]) {
-        races[element.name] = [{ pilot: next._id, time: element.time }]
+        races[element.name] = [{ id: next._id, time: element.time }]
       } else {
-        races[element.name].push({ pilot: next._id, time: element.time })
+        races[element.name].push({ id: next._id, time: element.time })
       }
     })
 
@@ -22,4 +24,15 @@ const extractValues = data => {
   return { pilots, races }
 }
 
-export default extractValues
+const sortRace = race => {
+  return race.sort((a, b) => {
+    const dateA = moment(a.time, 'HH:mm:ss')
+    const dateB = moment(b.time, 'HH:mm:ss')
+
+    return dateA.diff(dateB, 'seconds', true)
+  })
+}
+
+const formatTime = time => moment(time, 'HH:mm:ss').format('HH:mm:ss')
+
+export { extractValues, formatTime, sortRace }

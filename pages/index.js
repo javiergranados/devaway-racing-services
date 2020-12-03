@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
-import Pilots from '../components/Pilots'
-import extractValues from '../utils/data'
+import Ranking from '../components/Ranking'
+import { extractValues } from '../utils/data'
 
 function IndexPage({ data }) {
-  const { pilots } = extractValues(data)
+  const { pilots, races } = extractValues(data)
 
   return (
     <div className="text-indigoDye">
-      <h1 className="pb-10 text-4xl text-center font-semi lg:text-left">DevAway Racing Services</h1>
-      <Pilots pilots={pilots} />
+      <h1 className="text-4xl text-center font-semi lg:text-left">Ranking</h1>
+      <Ranking pilots={pilots} races={races} />
     </div>
   )
 }
@@ -19,7 +19,7 @@ export async function getStaticProps() {
   return {
     props: {
       data,
-      title: 'Home',
+      title: 'Ranking',
     },
   }
 }

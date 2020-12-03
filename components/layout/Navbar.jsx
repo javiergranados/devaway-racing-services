@@ -55,7 +55,7 @@ function Navbar() {
           onClick={handleLink}
           className={`block navbar__button mt-2${(router.pathname === '/' && ' selected') || ''}`}
         >
-          Home
+          Ranking
         </a>
         <a
           href="/pilots"

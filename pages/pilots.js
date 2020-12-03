@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import Pilots from '../components/Pilots'
-import extractValues from '../utils/data'
+import { extractValues } from '../utils/data'
 
 function PilotsPage({ data }) {
   const { pilots } = extractValues(data)
