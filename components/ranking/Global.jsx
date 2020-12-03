@@ -3,12 +3,13 @@ import { PILOTS_PROPTYPES, RACES_PROPTYPES } from '../../constants'
 import { formatTime } from '../../utils/data'
 
 function Global({ pilots, races }) {
+  console.log(races)
   return (
     <div className="flex flex-col">
       {races.map(race => {
         return (
           <div key={uuidv4()}>
-            <h2 className="py-5 text-2xl text-center font-regular lg:text-left">{race.name}</h2>
+            <h2 className="py-5 text-2xl text-center font-regular lg:text-left">{race[0].name}</h2>
             <div className="overflow-auto max-h-96">
               <div className="inline-block min-w-full align-middle">
                 <div className="overflow-hidden border-b border-gray-300 shadow scrollable sm:rounded-lg">

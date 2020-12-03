@@ -1,13 +1,15 @@
+import { v4 as uuidv4 } from 'uuid'
+
 import { PILOTS_PROPTYPES, RACES_PROPTYPES } from '../../constants'
 import { formatTime, getRacesByPilot } from '../../utils/data'
 
 function Single({ pilots, races }) {
   return (
     <div className="flex flex-col">
-      {Object.entries(pilots).map(([id, pilot]) => {
-        const racesByPilot = getRacesByPilot(races, id)
+      {pilots.map(pilot => {
+        const racesByPilot = getRacesByPilot(races, pilot.id)
         return (
-          <div key={id}>
+          <div key={pilot.id}>
             <h2 className="py-5 text-2xl text-center font-regular lg:text-left">{pilot.name}</h2>
             <div className="overflow-auto max-h-96">
               <div className="inline-block min-w-full align-middle">
@@ -22,10 +24,10 @@ function Single({ pilots, races }) {
                     </thead>
                     <tbody className="bg-seashell font-regular">
                       {racesByPilot.map(race => (
-                        <tr key={pilot.id}>
+                        <tr key={uuidv4()}>
                           <td className="text-center table__tbody__td lg:text-left">{race.name}</td>
-                          <td className="table__tbody__td">{race.position}</td>
-                          <td className="table__tbody__td">{formatTime(race.time)}</td>
+                          <td className="text-center table__tbody__td lg:text-left">{race.position}</td>
+                          <td className="text-center table__tbody__td lg:text-left">{formatTime(race.time)}</td>
                         </tr>
                       ))}
                     </tbody>
