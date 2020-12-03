@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import Meta from '../components/Meta'
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 import '../styles/globals.css'
 import '../styles/tailwind.css'
 
