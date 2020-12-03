@@ -4,11 +4,11 @@ import { formatTime, sortRace } from '../../utils/data'
 function Pilots({ pilots, races }) {
   return (
     <div className="flex flex-col">
-      {Object.entries(races).map(([name, race]) => {
+      {Object.values(races).map(race => {
         const sortedRace = sortRace(race)
         return (
-          <div key={name}>
-            <h2 className="py-5 text-2xl text-center font-regular lg:text-left">{name}</h2>
+          <div key={race.name}>
+            <h2 className="py-5 text-2xl text-center font-regular lg:text-left">{race.name}</h2>
             <div className="overflow-auto max-h-96">
               <div className="inline-block min-w-full align-middle">
                 <div className="overflow-hidden border-b border-gray-300 shadow scrollable sm:rounded-lg">
@@ -28,12 +28,12 @@ function Pilots({ pilots, races }) {
                           <td className="table__tbody__td">
                             <div className="flex items-center">
                               <div className="flex-shrink-0 w-10 h-10">
-                                <img className="rounded-full" src={pilots[pilot.id].picture} alt="pilot" />
+                                <img className="rounded-full" src={pilots[pilot.pilotId].picture} alt="pilot" />
                               </div>
-                              <div className="ml-4">{pilots[pilot.id].name}</div>
+                              <div className="ml-4">{pilots[pilot.pilotId].name}</div>
                             </div>
                           </td>
-                          <td className="table__tbody__td">{pilots[pilot.id].team}</td>
+                          <td className="table__tbody__td">{pilots[pilot.pilotId].team}</td>
                           <td className="table__tbody__td">{formatTime(pilot.time)}</td>
                         </tr>
                       ))}

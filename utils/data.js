@@ -5,9 +5,9 @@ const extractValues = data => {
   const pilots = data.reduce((prev, next) => {
     next.races.forEach(element => {
       if (!races[element.name]) {
-        races[element.name] = [{ id: next._id, time: element.time }]
+        races[element.name] = [{ name: element.name, pilotId: next._id, time: element.time }]
       } else {
-        races[element.name].push({ id: next._id, time: element.time })
+        races[element.name].push({ name: element.name, pilotId: next._id, time: element.time })
       }
     })
 
