@@ -17,7 +17,9 @@ function Navbar() {
   return (
     <nav className="flex flex-wrap items-center justify-between p-6 bg-white border-b shadow-lg">
       <div className="items-center flex-shrink-0 hidden mr-6 rounded-full lg:flex">
-        <Image src="/img/logo.jpeg" alt="logo" width={70} height={70} />
+        <a href="/" onClick={handleLink}>
+          <Image src="/img/logo.jpeg" alt="logo" width={70} height={70} />
+        </a>
       </div>
       <div className="block lg:hidden">
         <button
@@ -53,7 +55,14 @@ function Navbar() {
         <a
           href="/"
           onClick={handleLink}
-          className={`block navbar__button mt-2${(router.pathname === '/' && ' selected') || ''}`}
+          className={`lg:hidden block navbar__button mt-2${(router.pathname === '/' && ' selected') || ''}`}
+        >
+          Home
+        </a>
+        <a
+          href="/global"
+          onClick={handleLink}
+          className={`block navbar__button mt-2${(router.pathname === '/global' && ' selected') || ''}`}
         >
           Global Ranking
         </a>

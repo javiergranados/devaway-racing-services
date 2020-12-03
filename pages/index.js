@@ -1,31 +1,18 @@
-import Global from '../components/ranking/Global'
-import { DATA_PROPTYPES } from '../constants'
-import { extractValues } from '../utils/data'
-
-function IndexPage({ data }) {
-  const { pilots, races } = extractValues(data)
-
+function IndexPage() {
   return (
     <div className="text-indigoDye">
-      <h1 className="text-4xl text-center font-semi lg:text-left">Global Ranking</h1>
-      <Global pilots={pilots} races={races} />
+      <h1 className="text-4xl text-center font-semi lg:text-left">Home</h1>
+      <p className="text-3xl text-center lg:text-left">home page</p>
     </div>
   )
 }
 
 export async function getStaticProps() {
-  const data = require('../public/drivers_karts.json')
-
   return {
     props: {
-      data,
-      title: 'Global',
+      title: 'Home',
     },
   }
-}
-
-IndexPage.propTypes = {
-  data: DATA_PROPTYPES.isRequired,
 }
 
 export default IndexPage
