@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import Pilots from '../components/Pilots'
+import { DATA_PROPTYPES } from '../constants'
 import { extractValues } from '../utils/data'
 
 function PilotsPage({ data }) {
@@ -25,7 +25,7 @@ export async function getStaticProps() {
 }
 
 PilotsPage.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  data: DATA_PROPTYPES.isRequired,
 }
 
 export default PilotsPage

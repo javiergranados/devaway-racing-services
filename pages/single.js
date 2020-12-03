@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
 import Single from '../components/ranking/Single'
+import { DATA_PROPTYPES } from '../constants'
 import { extractValues } from '../utils/data'
 
-function IndexPage({ data }) {
+function SinglePage({ data }) {
   const { pilots, races } = extractValues(data)
 
   return (
@@ -24,8 +24,8 @@ export async function getStaticProps() {
   }
 }
 
-IndexPage.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+SinglePage.propTypes = {
+  data: DATA_PROPTYPES.isRequired,
 }
 
-export default IndexPage
+export default SinglePage

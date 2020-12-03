@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import { PILOTS_PROPTYPES } from '../constants'
 
 function Pilots({ pilots }) {
   return (
@@ -39,7 +39,7 @@ function Pilots({ pilots }) {
 }
 
 Pilots.propTypes = {
-  pilots: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  pilots: PILOTS_PROPTYPES.isRequired,
 }
 
 export default Pilots

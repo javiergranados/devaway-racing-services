@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types'
+import { PILOTS_PROPTYPES, RACES_PROPTYPES } from '../../constants'
 import { formatTime, getRacesByPilot } from '../../utils/data'
 
-function Pilots({ pilots, races }) {
+function Single({ pilots, races }) {
   return (
     <div className="flex flex-col">
       {Object.entries(pilots).map(([id, pilot]) => {
@@ -40,9 +40,9 @@ function Pilots({ pilots, races }) {
   )
 }
 
-Pilots.propTypes = {
-  pilots: PropTypes.shape({}).isRequired,
-  races: PropTypes.shape({}).isRequired,
+Single.propTypes = {
+  pilots: PILOTS_PROPTYPES.isRequired,
+  races: RACES_PROPTYPES.isRequired,
 }
 
-export default Pilots
+export default Single

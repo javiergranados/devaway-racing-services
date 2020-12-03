@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import Global from '../components/ranking/Global'
+import { DATA_PROPTYPES } from '../constants'
 import { extractValues } from '../utils/data'
 
 function IndexPage({ data }) {
@@ -25,7 +25,7 @@ export async function getStaticProps() {
 }
 
 IndexPage.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  data: DATA_PROPTYPES.isRequired,
 }
 
 export default IndexPage
