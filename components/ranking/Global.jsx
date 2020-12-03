@@ -3,7 +3,6 @@ import { PILOTS_PROPTYPES, RACES_PROPTYPES } from '../../constants'
 import { formatTime } from '../../utils/data'
 
 function Global({ pilots, races }) {
-  console.log(races)
   return (
     <div className="flex flex-col">
       {races.map(race => {

@@ -18,7 +18,9 @@
   "scripts": {
     "dev": "next dev -p 8000",
     "build": "next build",
-    "start": "next start -p 8000"
+    "start": "next start -p 8000",
+    "lint": "eslint . --ext .jsx,.js --ignore-pattern '.node_modules/' --ignore-pattern 'next/'",
+    "lint:fix": "eslint . --fix --ext .jsx,.js --ignore-pattern '.node_modules/' --ignore-pattern 'next/'"
   },
   "dependencies": {
     "autoprefixer": "^10.0.4",
