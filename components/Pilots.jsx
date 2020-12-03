@@ -15,8 +15,8 @@ function Pilots({ pilots }) {
                 </tr>
               </thead>
               <tbody className="bg-seashell font-regular">
-                {Object.entries(pilots).map(([key, pilot]) => (
-                  <tr key={key}>
+                {pilots.map(pilot => (
+                  <tr key={pilot.id}>
                     <td className="table__tbody__td">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 w-10 h-10">
@@ -39,7 +39,7 @@ function Pilots({ pilots }) {
 }
 
 Pilots.propTypes = {
-  pilots: PropTypes.shape({}).isRequired,
+  pilots: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 }
 
 export default Pilots

@@ -21,16 +21,14 @@ function extractValues(data) {
       }
     })
 
-    return {
-      ...prev,
-      [next._id]: {
-        age: next.age,
-        name: next.name,
-        picture: next.picture,
-        team: next.team,
-      },
-    }
-  }, {})
+    return prev.concat({
+      age: next.age,
+      id: next._id,
+      name: next.name,
+      picture: next.picture,
+      team: next.team,
+    })
+  }, [])
 
   return { pilots, races: Object.values(races).map(sortRace) }
 }
