@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import Ranking from '../components/Ranking'
+import Global from '../components/ranking/Global'
 import { extractValues } from '../utils/data'
 
 function IndexPage({ data }) {
@@ -8,7 +8,7 @@ function IndexPage({ data }) {
   return (
     <div className="text-indigoDye">
       <h1 className="text-4xl text-center font-semi lg:text-left">Global Ranking</h1>
-      <Ranking pilots={pilots} races={races} />
+      <Global pilots={pilots} races={races} />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { formatTime, sortRace } from '../utils/data'
+import { formatTime, sortRace } from '../../utils/data'
 
 function Pilots({ pilots, races }) {
   return (
