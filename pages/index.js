@@ -7,7 +7,7 @@ function IndexPage({ data }) {
 
   return (
     <div className="text-indigoDye">
-      <h1 className="text-4xl text-center font-semi lg:text-left">Ranking</h1>
+      <h1 className="text-4xl text-center font-semi lg:text-left">Global Ranking</h1>
       <Ranking pilots={pilots} races={races} />
     </div>
   )
@@ -19,7 +19,7 @@ export async function getStaticProps() {
   return {
     props: {
       data,
-      title: 'Ranking',
+      title: 'Global',
     },
   }
 }
