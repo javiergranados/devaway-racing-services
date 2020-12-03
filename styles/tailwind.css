@@ -28,6 +28,14 @@
   @apply bg-none;
 }
 
+.table__thead__th {
+  @apply px-6 py-3 text-sm tracking-wider text-left uppercase text-indigoDye font-semi bg-almond;
+}
+
+.table__tbody__td {
+  @apply px-6 py-4 text-sm text-orangeSoda;
+}
+
 @screen lg {
   .navbar__button {
     @apply p-4;
