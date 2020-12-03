@@ -35,4 +35,9 @@ const sortRace = race => {
 
 const formatTime = time => moment(time, 'HH:mm:ss').format('HH:mm:ss')
 
-export { extractValues, formatTime, sortRace }
+const getRacesByPilot = (races, pilotId) =>
+  Object.values(races)
+    .map(el => el.filter(el2 => el2.pilotId === pilotId))
+    .flat()
+
+export { extractValues, formatTime, getRacesByPilot, sortRace }

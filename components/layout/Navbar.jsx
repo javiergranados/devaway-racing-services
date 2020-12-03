@@ -58,6 +58,13 @@ function Navbar() {
           Global Ranking
         </a>
         <a
+          href="/single"
+          onClick={handleLink}
+          className={`block navbar__button mt-2${(router.pathname === '/single' && ' selected') || ''}`}
+        >
+          Single Ranking
+        </a>
+        <a
           href="/pilots"
           onClick={handleLink}
           className={`block navbar__button mt-2${(router.pathname === '/pilots' && ' selected') || ''}`}
