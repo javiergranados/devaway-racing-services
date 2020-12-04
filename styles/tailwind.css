@@ -21,7 +21,7 @@
 }
 
 .navbar__button {
-  @apply max-w-full px-0 py-2 mx-4 outline-none text-indigoDye;
+  @apply max-w-full px-0 py-2 mx-4 transition duration-300 ease-in-out outline-none text-indigoDye;
 }
 
 .navbar__button:target {

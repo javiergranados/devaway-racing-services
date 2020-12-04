@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import 'animate.css'
 
 function Layout({ title, children }) {
   return (

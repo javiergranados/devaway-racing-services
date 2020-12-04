@@ -4,7 +4,7 @@ import { formatTime } from '../../utils/data'
 
 function Global({ pilots, races }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col animate__animated animate__fadeIn">
       {races.map(race => {
         return (
           <div key={uuidv4()}>

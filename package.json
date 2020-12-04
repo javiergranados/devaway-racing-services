@@ -23,6 +23,7 @@
     "lint:fix": "eslint . --fix --ext .jsx,.js --ignore-pattern '.node_modules/' --ignore-pattern 'next/'"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "autoprefixer": "^10.0.4",
     "moment": "^2.29.1",
     "next": "^10.0.3",

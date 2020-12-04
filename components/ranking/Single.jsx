@@ -5,7 +5,7 @@ import { formatTime, getRacesByPilot } from '../../utils/data'
 
 function Single({ pilots, races }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col animate__animated animate__fadeIn">
       {pilots.map(pilot => {
         const racesByPilot = getRacesByPilot(races, pilot.id)
         return (

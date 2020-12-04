@@ -2,7 +2,7 @@ import { PILOTS_PROPTYPES } from '../constants'
 
 function Pilots({ pilots }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col animate__animated animate__fadeIn">
       <h2 className="py-5 text-2xl text-center font-regular lg:text-left">List of Pilots</h2>
       <div className="overflow-x-auto">
         <div className="inline-block min-w-full align-middle">
